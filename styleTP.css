@@ -1,0 +1,30 @@
+.TP {color: black; text-decoration: underline;}
+.BT {color: black;}
+
+.TOP {}
+.BTM {display: none;}
+
+h1 {color: dimgray;   }
+h2 {color: dimgray;}
+h4 {color: dimgray;}
+p {color: dimgray;}
+li {color: dimgray;}
+
+a:link {
+  color: black ;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: dimgray;
+}
+a:active {
+  color: dimgray;
+}
+
+body{
+	background: linear-gradient(to top, yellow 0,1%, white, white, white, white, white, white, white, white, white, white, white, white, white, pink);
+}
+
+

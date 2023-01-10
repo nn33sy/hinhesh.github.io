@@ -1,0 +1,29 @@
+.TP {color: black;}
+.BT {color: black; text-decoration: underline;}
+
+.TOP {display: none;}
+.BTM {}
+
+h1 {color: darkgoldenrod;}
+h2 {color: darkgoldenrod;}
+h4 {color: darkgoldenrod;}
+p {color: darkgoldenrod;}
+li {color: darkgoldenrod;}
+
+
+a:link {
+  color: SlateBlue ;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: darkgoldenrod;
+}
+a:active {
+  color: black;
+}
+
+body{
+	background: linear-gradient(to left, darkgoldenrod 0,1%, white 99.9%);
+}

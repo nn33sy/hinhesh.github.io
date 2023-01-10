@@ -1,0 +1,447 @@
+/*//////////// P R I N T /////////////*/
+
+@media print{
+
+:root{
+  --page-width: 210mm;
+  --page-height: 298mm;
+  --cell-width: calc(210mm / 2);
+  --cell-height: calc(298mm / 2);
+}
+
+body {
+  position: absolute;
+  background: white;
+
+  font-size: small;
+  padding:0;
+  margin:0;
+  line-height: 0.8cm;
+ 
+  width: var(--page-width);
+
+  height: var(--page-height);
+  z-index: -1;
+}
+
+.wrapper {
+  margin: 0;
+  display: grid;
+  grid-gap: 0;
+  align-content: center; 
+  align-items: center;
+  width: var(--page-width); 
+  break-inside: auto;
+  page-break-inside: auto;
+  z-index: 5;
+}
+
+.cell{
+  position: sticky;
+  margin: 0;
+  border: 0;
+	padding: 1px;
+	page-break-inside: avoid;
+	width: var(--cell-width);
+	height: var(--cell-height);
+  display: block;
+  z-index: 4;
+}
+
+.content{
+  /*border: dashed blue; */
+  padding: 10mm;
+  /* do not put any width nor height information here */
+}
+
+.FR {display: none;}
+.EN {display: none;}
+
+.FRA {display: initial;}
+.ENG {display: initial;}
+
+.TOP {
+  page-break-before: always;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  color: blue;
+  /*border: dashed pink;*/
+}
+
+.BTM {
+  page-break-after: always;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  color: green;
+  /*border: dashed green;*/
+}
+
+/*
+.LEFT{background: linear-gradient(to right, transparent, transparent, transparent, yellow 99%);}
+.RIGHT{background: linear-gradient(to left, transparent, transparent, transparent, yellow 99%);}
+*/
+
+.screenonly{display: none;}
+.printonly{display: block;} 
+
+button {display: none;}
+p {
+  color:black;
+}
+#moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 blue;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+
+h1 {font-family: 'Gozette'; 
+    font-size: 4em; line-height: 1em; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0;
+    color:blue;
+    text-indent: 0;
+  }
+h2 {font-family: 'Anthony'; 
+    font-weight: bold;
+    font-size: 3em; 
+    line-height: 1em; 
+    color: blue;
+  }
+h3 {font-family: 'Minipax'; 
+    font-weight: bold;
+    font-size: 1.3em; 
+}    
+
+/* hérité du site 2print.org mais utile pour traiter les images en monochrome. 
+Actuelement non utilisé dans le template  */
+
+img{
+    /*display: none;*/
+/*    width: 8cm;*/
+    opacity: 0.5;
+    top: -4em; 
+    position: relative;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    border-radius: 50%;
+    border: 0.1em blue dotted;
+
+    
+  }
+
+.boiteimg{width: 100%; 
+      margin-bottom: 0;
+      background: none;}
+
+/* NUMBERS OF THE A4 PAGES (RECTO-VERSO ON 4 A4 SHEETS) */ 
+
+.A4numbers {
+  position: sticky;
+  text-align: center;
+  z-index: 1;
+  margin-top: -90mm; 
+  padding: 0px;
+}
+.A4number {
+  font-size: 120em;
+  color: pink;
+  text-align: center;
+  font-family: 'Anthony';
+  line-height: 0;
+  margin-top: 0; 
+  padding: 0px;
+}
+.A6numbers {
+  position: sticky;
+  z-index: 2;
+  margin-top: 0mm; 
+  padding: 0px;
+}
+.A6number {
+  font-size: 5em;
+  color: yellow;
+  font-family: 'Anthony';
+  line-height: 0;
+  margin-top: 0; 
+  padding: 0px;
+}
+
+.A6left {align-content: left; margin-left: 10mm; text-align: left;}
+.A6right {align-content: right; margin-right: 10mm; text-align: right;}
+
+a:link {
+  color: rgb(77, 77, 255);
+  font-style: oblique;
+}
+a:visited {
+  text-decoration: none;
+  color: rgb(77, 77, 255);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(77, 77, 255);
+}
+a:active {
+  text-decoration: none;
+  color: rgb(77, 77, 255);
+}
+
+p { 
+  line-height: 1.1em; 
+  padding-bottom: 5mm;
+  margin: 0px;
+}
+
+.htmllinks{
+  font-size: xx-small;
+  display: initial;
+}
+
+.gradientonscreen{
+  background: white;
+  padding-right: inherit;
+  padding-left: inherit;
+  color: inherit;
+}
+
+
+/*  GRID FOR A6 PAGES POSITION INSIDE A4 PAPER  */ 
+
+#TOP-title { 
+  grid-column: 1 / span 1;           grid-row: 1 / span 1; 
+}
+
+
+
+#name {
+  grid-column: 1 / span 1;           grid-row: 1 / span 1; 
+}
+
+
+#education { 
+  grid-column: 2 / span 1;            grid-row: 2 / span 1; 
+}
+
+#experience { 
+  grid-column: 1 / span 1;            grid-row: 2 / span 1; 
+}
+#projet{ 
+  grid-column: 1 / span 1;            grid-row: 3 / span 1; 
+}
+#competence{ 
+  grid-column: 2 / span 1;            grid-row: 2 / span 1; 
+}
+
+#photo{
+  grid-column: 2 / span 1; grid-row: 1 /span 1;
+  height: 10px;
+  width: auto;
+}
+
+#TOP-page2 { 
+  grid-column: 1 / span 1;           grid-row: 3 / span 1; 
+}
+
+#BTM-page2 { 
+  grid-column: 1 / span 1;           grid-row: 4 / span 1; 
+}
+
+#TOP-page3 { 
+  grid-column: 2 / span 1;           grid-row: 5 / span 1; 
+}
+
+#BTM-page3 { 
+  grid-column: 2 / span 1;           grid-row: 6 / span 1; 
+}
+
+#TOP-page4 { 
+  grid-column: 1 / span 1;           grid-row: 7 / span 1; 
+}
+
+#BTM-page4 { 
+  grid-column: 1 / span 1;           grid-row: 8 / span 1; 
+}
+
+#TOP-page5 { 
+  grid-column: 2 / span 1;           grid-row: 9 / span 1; 
+}
+
+#BTM-page5 { 
+  grid-column: 2 / span 1;           grid-row: 10 / span 1; 
+}
+
+#TOP-page6 { 
+  grid-column: 1 / span 1;           grid-row: 11 / span 1; 
+}
+
+#BTM-page6 { 
+  grid-column: 1 / span 1;           grid-row: 12 / span 1; 
+}
+
+#TOP-page7 { 
+  grid-column: 2 / span 1;           grid-row: 13 / span 1; 
+}
+
+#BTM-page7 { 
+  grid-column: 2 / span 1;           grid-row: 14 / span 1; 
+}
+
+#TOP-page8 { 
+  grid-column: 1 / span 1;           grid-row: 15 / span 1; 
+}
+
+#BTM-page8 { 
+  grid-column: 1 / span 1;           grid-row: 16 / span 1; 
+}
+
+#TOP-page9 { 
+  grid-column: 2 / span 1;           grid-row: 15 / span 1; 
+}
+
+#BTM-page9 { 
+  grid-column: 2 / span 1;           grid-row: 16 / span 1; 
+}
+
+#TOP-page10 { 
+  grid-column: 1 / span 1;           grid-row: 13 / span 1; 
+}
+
+#BTM-page10 { 
+  grid-column: 1 / span 1;           grid-row: 14 / span 1; 
+}
+
+#TOP-page11 { 
+  grid-column: 2 / span 1;           grid-row: 11 / span 1; 
+}
+
+#BTM-page11 { 
+  grid-column: 2 / span 1;           grid-row: 12 / span 1; 
+}
+
+#TOP-page12 { 
+  grid-column: 1 / span 1;           grid-row: 9 / span 1; 
+}
+
+#BTM-page12 { 
+  grid-column: 1 / span 1;           grid-row: 10 / span 1; 
+}
+
+#TOP-page13 { 
+  grid-column: 2 / span 1;           grid-row: 7 / span 1; 
+}
+
+#BTM-page13 { 
+  grid-column: 2 / span 1;           grid-row: 8 / span 1; 
+}
+
+#TOP-page14 { 
+  grid-column: 1 / span 1;           grid-row: 5 / span 1; 
+}
+
+#BTM-page14 { 
+  grid-column: 1 / span 1;           grid-row: 6 / span 1; 
+}
+
+#TOP-page15 { 
+  grid-column: 2 / span 1;           grid-row: 3 / span 1; 
+}
+
+#BTM-page15 { 
+  grid-column: 2 / span 1;           grid-row: 4 / span 1; 
+}
+
+#TOP-back-cover { 
+  grid-column: 1 / span 1;           grid-row: 1 / span 1; 
+}
+
+#BTM-back-cover { 
+  grid-column: 1 / span 1;           grid-row: 2 / span 1; 
+}
+
+/* NUMBERS OF THE A4 PAGES (RECTO-VERSO ON 4 A4 SHEETS) */ 
+
+#number1 { 
+  grid-column: 1 / span 2;           grid-row: 1 / span 2; 
+}
+#number2 { 
+  grid-column: 1 / span 2;           grid-row: 3 / span 2; 
+}
+#number3 { 
+  grid-column: 1 / span 2;           grid-row: 5 / span 2; 
+}
+#number4 { 
+  grid-column: 1 / span 2;           grid-row: 7 / span 2; 
+}
+#number5 { 
+  grid-column: 1 / span 2;           grid-row: 9 / span 2; 
+}
+#number6 { 
+  grid-column: 1 / span 2;           grid-row: 11 / span 2; 
+}
+#number7 { 
+  grid-column: 1 / span 2;           grid-row: 13 / span 2; 
+}
+#number8 { 
+  grid-column: 1 / span 2;           grid-row: 15 / span 2; 
+}
+
+/* NUMBERS OF THE A6 PAGES ONCE ASEMBLED */ 
+
+#pagenumber1 { 
+  grid-column: 2 / span 1;           grid-row: 1 / span 2; 
+}
+#pagenumber2 { 
+  grid-column: 1 / span 1;           grid-row: 3 / span 2; 
+}
+#pagenumber3 { 
+  grid-column: 2 / span 1;           grid-row: 5 / span 2; 
+}
+#pagenumber4 { 
+  grid-column: 1 / span 1;           grid-row: 7 / span 2; 
+}
+#pagenumber5 { 
+  grid-column: 2 / span 1;           grid-row: 9 / span 2; 
+}
+#pagenumber6 { 
+  grid-column: 1 / span 1;           grid-row: 11 / span 2; 
+}
+#pagenumber7 { 
+  grid-column: 2 / span 1;           grid-row: 13 / span 2; 
+}
+#pagenumber8 { 
+  grid-column: 1 / span 1;           grid-row: 15 / span 2; 
+}
+#pagenumber9 { 
+  grid-column: 2 / span 1;           grid-row: 15 / span 2; 
+}
+#pagenumber10 { 
+  grid-column: 1 / span 1;           grid-row: 13 / span 2; 
+}
+#pagenumber11 { 
+  grid-column: 2 / span 1;           grid-row: 11 / span 2; 
+}
+#pagenumber12 { 
+  grid-column: 1 / span 1;           grid-row: 9 / span 2; 
+}
+#pagenumber13 { 
+  grid-column: 2 / span 1;           grid-row: 7 / span 2; 
+}
+#pagenumber14 { 
+  grid-column: 1 / span 1;           grid-row: 5 / span 2; 
+}
+#pagenumber15 { 
+  grid-column: 2 / span 1;           grid-row: 3 / span 2; 
+}
+#pagenumber16 { 
+  grid-column: 1 / span 1;           grid-row: 1 / span 2; 
+}
+
+}

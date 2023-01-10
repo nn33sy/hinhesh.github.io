@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Anthony';
+    src:	url('type/Anthony.eot') format('eot'), 
+    		url('type/Anthony.woff') format('woff'), 
+    		url('type/Anthony.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Barlow';
+    src:    url('type/Barlow-elasticc.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Gozette';
+  src:    url('type/Goozette.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minipax';
+    src:	url('type/Minipax-Bold.eot') format('eot'), 
+    		url('type/Minipax-Bold.woff') format('woff'), 
+    		url('type/Minipax-Bold.woff2') format('woff2');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Fourmi';
+  src:	url('type/FOURMI-light.otf') format('opentype');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minipax';
+    src:	url('type/Minipax-Regular.eot') format('eot'), 
+    		url('type/Minipax-Regular.woff') format('woff'), 
+    		url('type/Minipax-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minipax';
+    src:	url('type/Minipax-Medium.eot') format('eot'), 
+    		url('type/Minipax-Medium.woff') format('woff'), 
+    		url('type/Minipax-Medium.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minipax';
+    src:	url('type/Minipax-SemiBold.eot') format('eot'), 
+    		url('type/Minipax-SemiBold.woff') format('woff'), 
+    		url('type/Minipax-SemiBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+button {
+  background-color: transparent;
+  color: black;
+  border: 0px solid ;font-family: 'Minipax';
+  font-weight: bold;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.menu {
+  width: 100%;
+  text-align: right;
+  position: sticky;
+  top: 0;
+  right: 10px;
+  z-index: 10;
+  line-height: 2.5em;
+}
+
+.wrapper {
+ }
+
+.printonly {display: none;}
+.htmllinks {display: none;}
+
+img{
+  height:400px;
+  width: auto;
+  
+  }
+
+body {
+  margin-top: 0;
+
+}
+.photo {
+  border-radius: 50%;
+  height: 30px;
+  width: auto;
+}
+h1 {font-family: 'Gozette';  
+    font-size: 5em; line-height: 1em; margin-bottom: 1em;
+ 
+    text-indent: 0;
+  }
+h2 {font-family: 'Anthony';
+    font-weight: lighter; 
+    margin-bottom: 0.5em;
+    padding: 0px;
+    font-size: 3em;
+}
+h3 {font-family: 'Minipax';
+    font-weight: lighter; 
+    margin-bottom: 0.5em;
+    padding: 0px;
+    font-size: 2em;
+}
+
+p { 
+  padding: 0px;
+  font-family: 'Minipax';
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0px;
+  padding-bottom: 1em;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+.gradientonscreen{
+  background: linear-gradient(to right, blue, orange, yellow, green, blue, indigo, violet);
+  padding-right: 5px;
+  padding-left: 5px;
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {font-size: 7em;}
+  h2 {font-size: 4.5em; line-height: 1em; }
+  h3 {font-size: 1.5em; }
+  p {width: 90%; }
+  .cell{width: 75%;}
+  .content{}
+}
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  h1 {font-size: 5em;}
+  h2 {font-size: 2em; line-height: 1em; }
+  h3 {font-size: 1.5em;}
+  .content{}
+  .menu {background: linear-gradient(to bottom, white 80%, transparent);}
+}
+@media screen and (min-width: 100px) and (max-width: 500px) and (orientation: portrait) {
+  h1 {font-size: 3.5em;}
+  h2 {font-size: 2em; line-height: 1em; }
+  h3 {font-size: 1.5em;}
+  .content{width: 95%;}
+  .menu {background: linear-gradient(to bottom, white 70%, transparent);}
+}
+
+
+
