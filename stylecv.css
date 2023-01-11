@@ -15,6 +15,12 @@
     font-style: normal;
 }
 @font-face {
+  font-family: 'Barlaxent';
+  src:    url('type/Barlaxent.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Gozette';
   src:    url('type/Goozette.otf') format('opentype');
   font-weight: normal;
@@ -93,13 +99,20 @@ button {
 .htmllinks {display: none;}
 
 img{
-  height:400px;
+  height:300px;
   width: auto;
+  border-radius: 50%;
+  border: 0.1cm blue dotted;
   
   }
 
 body {
   margin-top: 0;
+
+ 
+
+}
+.wrapper {
 
 }
 .photo {
@@ -109,20 +122,24 @@ body {
 }
 h1 {font-family: 'Gozette';  
     font-size: 5em; line-height: 1em; margin-bottom: 1em;
- 
-    text-indent: 0;
+
+    text-indent: 1cm;
   }
-h2 {font-family: 'Anthony';
+h1:hover {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2 {font-family: 'Fourmi';
     font-weight: lighter; 
     margin-bottom: 0.5em;
+    color: blue;
     padding: 0px;
-    font-size: 3em;
+    font-size: 1em;
 }
 h3 {font-family: 'Minipax';
     font-weight: lighter; 
     margin-bottom: 0.5em;
     padding: 0px;
-    font-size: 2em;
+    font-size: 0.5em;
 }
 
 p { 
@@ -135,14 +152,15 @@ p {
 }
 
 a:link {
-  text-decoration: none;
+  text-decoration: blink;
 }
 a:visited {
-  text-decoration: none;
+  text-decoration: blink;
   color: black;
 }
 a:hover {
   text-decoration: none;
+  font-family: 'Barlow' ;
 }
 a:active {
   text-decoration: none;

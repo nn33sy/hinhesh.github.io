@@ -109,7 +109,7 @@ h1 {font-family: 'Gozette';
     color:blue;
     text-indent: 0;
   }
-h2 {font-family: 'Anthony'; 
+h2 {font-family: 'Fourmi'; 
     font-weight: bold;
     font-size: 3em; 
     line-height: 1em; 
@@ -182,8 +182,9 @@ a:link {
   font-style: oblique;
 }
 a:visited {
-  text-decoration: none;
+  text-decoration: ;
   color: rgb(77, 77, 255);
+
 }
 a:hover {
   text-decoration: none;

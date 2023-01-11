@@ -4,7 +4,7 @@
 .TOP {display: none;}
 .BTM {}
 
-h1 {color: darkgoldenrod;}
+h1 {color: rgb(22, 27, 175);}
 h2 {color: darkgoldenrod;}
 h4 {color: darkgoldenrod;}
 p {color: darkgoldenrod;}
@@ -25,5 +25,5 @@ a:active {
 }
 
 body{
-	background: linear-gradient(to left, darkgoldenrod 0,1%, white 99.9%);
+	background: linear-gradient(to left, green 0,1%, white 99.9%);
 }
