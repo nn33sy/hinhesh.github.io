@@ -14,6 +14,13 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+  font-family: 'BarlowBois';
+  src:    url('type/Barlow-TypoDesBois.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: 'Barlaxent';
   src:    url('type/Barlaxent.otf') format('opentype');
@@ -23,6 +30,13 @@
 @font-face {
   font-family: 'Gozette';
   src:    url('type/Goozette.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linea';
+  src:    url('type/Linea.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -93,6 +107,11 @@ button {
 }
 
 .wrapper {
+  margin-left: 10%;
+ }
+ .wrapperintro {
+  margin-left: 5%;
+  display: flex;
  }
 
 .printonly {display: none;}
@@ -101,8 +120,8 @@ button {
 img{
   height:300px;
   width: auto;
-  border-radius: 50%;
-  border: 0.1cm blue dotted;
+
+
   
   }
 
@@ -112,23 +131,20 @@ body {
  
 
 }
-.wrapper {
 
-}
-.photo {
+#photo {
   border-radius: 50%;
-  height: 30px;
-  width: auto;
+
+  border: 0.1cm blue dotted;
+
 }
 h1 {font-family: 'Gozette';  
     font-size: 5em; line-height: 1em; margin-bottom: 1em;
 
     text-indent: 1cm;
   }
-h1:hover {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-h2 {font-family: 'Fourmi';
+
+h2 {font-family: 'BarlowBois';
     font-weight: lighter; 
     margin-bottom: 0.5em;
     color: blue;
@@ -197,4 +213,8 @@ a:active {
 }
 
 
+#myCanvas{
+  border-radius: 90%;
+  
 
+}

@@ -241,7 +241,7 @@ p {
   grid-column: 2 / span 1;            grid-row: 2 / span 1; 
 }
 
-#photo{
+#photoprint{
   grid-column: 2 / span 1; grid-row: 1 /span 1;
   height: 10px;
   width: auto;
