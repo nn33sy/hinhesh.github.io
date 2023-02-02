@@ -137,7 +137,7 @@ margin-bottom: 10%;
 
 
 #photo {
-  border-radius: 50%;
+  border-radius: 20%;
 
   border: 0.1cm blue dotted;
 
@@ -220,5 +220,26 @@ a:active {
 #myCanvas{
   border-radius: 90%;
   
+  width:300px;
+  height:300px;
+}
+@media screen and (min-width: 100px) and (max-width: 800px)
+{
+  
+#myCanvas{
+  border-radius: 20%;
+  padding-right: 20px;
+  
+  width:200px;
+  height:200px;
+}
+h1 {
+  font-size: 50px;
 
+}
+#photo {
+  height: 100px;
+  border-radius: 20%;
+ 
+}
 }
