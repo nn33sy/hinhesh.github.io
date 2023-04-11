@@ -118,8 +118,8 @@ button {
 .htmllinks {display: none;}
 
 img{
-  height:300px;
-  width: auto;
+ width: 300px;
+  height: auto;
   border-radius: 0%;
 
 
@@ -216,7 +216,21 @@ a:active {
   .menu {background: linear-gradient(to bottom, white 70%, transparent);}
 }
 
+.box {
+  background-color: rgb(220, 220, 220);
+  border: 4cm pink;
+  border-radius: 20px;
 
+  width: 500px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+  padding: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-evenly;
+
+}
 #myCanvas{
   border-radius: 90%;
   
